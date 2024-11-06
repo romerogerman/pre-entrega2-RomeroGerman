@@ -97,6 +97,30 @@ li {
     font-size: 20px;
 }
 
+/*css index*/
+#main .contenido2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap; /* Permite que las tarjetas se ajusten a una nueva línea si no caben */
+    justify-content: center; /* Alinea las tarjetas con espacio entre ellas */
+    gap: 50px; /* Establece el espacio entre las tarjetas */
+}
+
+.card {
+    flex: 1 1 18rem; /* Cada tarjeta tiene un ancho mínimo de 18rem */
+    max-width: 18rem; /* Limita el tamaño máximo de cada tarjeta */
+}
+.tituloIndex {
+    text-align: center;
+    text-decoration: underline;
+}
+.parrafoIndex {
+    text-align: center;
+}
+
+
+
+
 /*css pagina Acerca de*/
 
 .tituloAcerca {
@@ -167,6 +191,7 @@ li {
 
     width: 700px;
     height: 400px;
+    align-self: center;
 }
 
 /*css contacto*/
