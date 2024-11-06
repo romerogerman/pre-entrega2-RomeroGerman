@@ -5,36 +5,37 @@
     box-sizing: border-box;
 }
 
-
+/* Estilo para el texto "FOOTBALL AMERICANO MAR DEL PLATA" */
+.football {
+    color: white; /* Cambia el color a blanco */
+}
 
 /* Limitar el tamaño de la imagen de campeones1 y ajustarla al tamaño de la página */
 .campeones1 img {
-    width: 100%; /* Asegura que la imagen no se salga del contenedor */
-    max-width: 100%; /* Limita el tamaño máximo de la imagen al 100% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
-/* Asegurarse de que .campeones1 no se estire innecesariamente */
 .campeones1 {
     width: 100%;
-    max-width: 600px; /* Limita el tamaño máximo de la imagen */
+    max-width: 600px;
     margin: 0 auto;
     text-align: center;
 }
 
 /* Limitar el tamaño de la imagen de campeones2 y ajustarla al tamaño de la página */
 .campeones2 img {
-    width: 100%; /* Asegura que la imagen no se salga del contenedor */
-    max-width: 100%; /* Limita el tamaño máximo de la imagen al 100% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
-/* Asegurarse de que .campeones2 no se estire innecesariamente */
 .campeones2 {
     width: 100%;
-    max-width: 600px; /* Limita el tamaño máximo de la imagen */
+    max-width: 600px;
     margin: 0 auto;
     text-align: center;
 }
@@ -71,10 +72,6 @@ li {
 .logo-h {
     width: 80px;
     height: 80px;
-}
-
-.football {
-    color: white;
 }
 
 #main .h2-foto {
@@ -123,225 +120,124 @@ li {
     font-size: 20px;
 }
 
-/*css index*/
-#main .contenido2 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; /* Permite que las tarjetas se ajusten a una nueva línea si no caben */
-    justify-content: center; /* Alinea las tarjetas con espacio entre ellas */
-    gap: 50px; /* Establece el espacio entre las tarjetas */
-}
-
-.card {
-    flex: 1 1 18rem; /* Cada tarjeta tiene un ancho mínimo de 18rem */
-    max-width: 18rem; /* Limita el tamaño máximo de cada tarjeta */
-}
-
-.tituloIndex {
+/* Estilo para la página de Información Torneo */
+#main .tituloInfo {
     text-align: center;
-    text-decoration: underline;
+    margin: 20px 0;
 }
 
-.parrafoIndex {
+#main .tituloInfo2 {
     text-align: center;
-}
-
-/*css pagina Acerca de*/
-.tituloAcerca {
-    text-align: center;
-}
-
-.card-row {
-    display: flex;
-    /* Make the row a flex container */
-    flex-direction: row;
-    /* Ensure horizontal alignment */
-    justify-content: center;
-    /* Center cards within the row */
-    gap: 20px;
-    /* Space between the cards */
-    flex-wrap: nowrap;
-    /* Prevent wrapping to a new line */
-}
-
-.card {
-    flex: 0 0 auto;
-    /* Ensure the cards keep their width and don’t shrink or grow */
-}
-
-.card-title {
-    text-decoration: underline;
-}
-
-/*css hof*/
-.tituloHof {
-    text-align: center;
-}
-
-.campeones1 {
-    text-align: center;
-    text-decoration: underline;
-}
-
-.campeones2 {
-    text-align: center;
-    text-decoration: underline;
-}
-
-.off {
-    text-decoration: underline;
-}
-
-.def {
-    text-decoration: underline;
-}
-
-/* css info torneo*/
-.tituloInfo {
-    text-align: center;
-}
-
-.tituloInfo2 {
-    text-align: center;
+    margin: 20px 0;
 }
 
 /* Estilo para la imagen con la clase fixture */
 .fixture {
-    display: block;               /* Hace que la imagen sea un bloque */
-    max-width: 100%;              /* Limita el tamaño máximo de la imagen al 100% del contenedor */
-    height: auto;                 /* Mantiene la proporción de la imagen */
-    margin: 20px auto;            /* Centra la imagen horizontalmente */
-}
-
-
-
-/*css contacto*/
-.contacto {
-    text-align: center;
-}
-
-/* Scope all styles inside the #acerca-page wrapper */
-#acerca-page {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-/* Header Styles (Specific to this page) */
-#acerca-page #header {
-    background-color: #1f2937;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-#acerca-page #header h1 {
-    font-size: 1.8rem;
-    text-align: center;
-    flex: 1 1 100%;
-    margin-bottom: 10px;
-}
-
-#acerca-page #navBar ul {
-    list-style-type: none;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#acerca-page #navBar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* Cards Section */
-#acerca-page .card-row {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-#acerca-page .card {
-    width: 18rem;
-    margin-bottom: 20px;
-}
-
-#acerca-page .card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-/* Footer Styles */
-#acerca-page #footer {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
 }
 
 /* Responsive Media Queries */
 @media (max-width: 576px) {
-    #acerca-page #header h1 {
-        font-size: 1.5rem;
-    }
-
-    #acerca-page #navBar ul {
+    /* Ajuste para dispositivos pequeños (móviles) */
+    #navBar {
         flex-direction: column;
         align-items: center;
     }
 
-    #acerca-page .card {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    #acerca-page .card-row {
+    #navBar ul {
+        display: flex;
         flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
 
-    #acerca-page .card {
-        width: 80%;
-        margin: 0 auto;
+    .fixture {
+        width: 100%; /* La imagen se adapta al tamaño del contenedor */
+    }
+
+    .tituloInfo, .tituloInfo2 {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    table {
+        font-size: 0.8rem; /* Ajustamos el tamaño de la tabla en pantallas pequeñas */
+    }
+
+    th, td {
+        padding: 5px; /* Reducimos el padding de las celdas */
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footerUl {
+        margin-top: 20px;
     }
 }
 
-/* Wrapper to apply custom styles only for the contact page */
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: start;
-    padding: 20px;
-}
-
-/* Card Styling */
-.card {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-body {
-    padding: 15px;
-}
-
-/* Form Section Styling */
-.form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr;
+    /* Ajuste para tablets */
+    .tituloInfo, .tituloInfo2 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        font-size: 1rem; /* Ajustamos el tamaño de la tabla */
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    #navBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fixture {
+        width: 100%; /* La imagen se adapta al tamaño del contenedor */
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footerUl {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Ajuste para pantallas de computadoras de tamaño medio */
+    .tituloInfo, .tituloInfo2 {
+        font-size: 1.7rem;
+    }
+
+    table {
+        font-size: 1.1rem; /* Ajuste de la tabla */
+    }
+
+    th, td {
+        padding: 12px;
+    }
+
+    #navBar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
     }
 }
