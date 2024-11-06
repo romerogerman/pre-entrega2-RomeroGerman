@@ -1,29 +1,114 @@
-/* Restablecer los estilos globales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@media (max-width: 576px) {
+    /* Ajuste para dispositivos pequeños (móviles) */
+    #navBar {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho */
+        gap: 10px;
+    }
+
+    #navBar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 0;
+    }
+
+    /* Mejorar la apariencia de los enlaces */
+    #navBar ul li {
+        display: block; /* Hace que los elementos de la lista estén en columna */
+        width: 100%; /* Asegura que cada item ocupe todo el ancho disponible */
+    }
+
+    .fixture {
+        width: 100%; /* La imagen se adapta al tamaño del contenedor */
+    }
+
+    .tituloInfo, .tituloInfo2 {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    table {
+        font-size: 0.8rem; /* Ajustamos el tamaño de la tabla en pantallas pequeñas */
+    }
+
+    th, td {
+        padding: 5px; /* Reducimos el padding de las celdas */
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footerUl {
+        margin-top: 20px;
+    }
 }
 
-/* Estilo para el texto "FOOTBALL AMERICANO MAR DEL PLATA" */
-.football {
-    color: white; /* Cambia el color a blanco */
+@media (max-width: 768px) {
+    /* Ajuste para tablets */
+    .tituloInfo, .tituloInfo2 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        font-size: 1rem; /* Ajustamos el tamaño de la tabla */
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    #navBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fixture {
+        width: 100%; /* La imagen se adapta al tamaño del contenedor */
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footerUl {
+        margin-top: 20px;
+    }
 }
 
-/* Limitar el tamaño de la imagen de campeones1 y ajustarla al tamaño de la página */
-.campeones1 img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+@media (max-width: 1024px) {
+    /* Ajuste para pantallas de computadoras de tamaño medio */
+    .tituloInfo, .tituloInfo2 {
+        font-size: 1.7rem;
+    }
+
+    table {
+        font-size: 1.1rem; /* Ajuste de la tabla */
+    }
+
+    th, td {
+        padding: 12px;
+    }
+
+    #navBar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
 }
 
-.campeones1 {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
 
 /* Limitar el tamaño de la imagen de campeones2 y ajustarla al tamaño de la página */
 .campeones2 img {
