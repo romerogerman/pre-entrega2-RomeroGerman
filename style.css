@@ -345,3 +345,165 @@ li {
         grid-template-columns: 1fr;
     }
 }
+
+/* Estilo específico para la página de Información Torneo */
+
+/* Mantener la estructura general para pantallas grandes */
+#main .tituloInfo, #main .tituloInfo2, #main .tabla {
+    text-align: center;
+}
+
+#main .fixture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Ajustes para pantallas pequeñas (celulares) */
+@media (max-width: 576px) {
+    #main .tituloInfo {
+        font-size: 1.5rem; /* Ajustar tamaño del texto */
+    }
+
+    #main .tituloInfo2 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        font-size: 0.8rem; /* Reducir tamaño de texto de la tabla */
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    #main .fixture {
+        width: 100%; /* Ajustar la imagen a todo el ancho */
+    }
+
+    .tabla {
+        font-size: 1.2rem;
+        margin: 20px 0;
+    }
+
+    /* Hacer que los elementos de la tabla ocupen más espacio en móviles */
+    table, th, td {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+
+    th {
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px 5px;
+    }
+}
+
+/* Ajustes para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    #main .tituloInfo {
+        font-size: 1.7rem;
+    }
+
+    #main .tituloInfo2 {
+        font-size: 1.3rem;
+    }
+
+    table {
+        font-size: 1rem; /* Ajustar tamaño de texto de la tabla */
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    #main .fixture {
+        width: 90%; /* Ajustar la imagen para que ocupe el 90% del ancho */
+    }
+
+    .tabla {
+        font-size: 1.5rem;
+    }
+
+    /* Mejorar la visualización de las tablas en tablets */
+    table, th, td {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+
+    th {
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px 5px;
+    }
+}
+
+/* Ajustes para pantallas grandes (monitores de PC) */
+@media (min-width: 1200px) {
+    #main .tituloInfo {
+        font-size: 2rem; /* Ajustar tamaño de texto para pantallas grandes */
+    }
+
+    #main .tituloInfo2 {
+        font-size: 1.8rem;
+    }
+
+    table {
+        font-size: 1.1rem; /* Ajustar tamaño de texto de la tabla */
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    #main .fixture {
+        width: 80%; /* Ajustar la imagen para que ocupe el 80% del ancho */
+    }
+
+    .tabla {
+        font-size: 1.5rem;
+    }
+
+    /* Hacer que las tablas se vean bien en monitores */
+    table, th, td {
+        width: 100%;
+    }
+
+    th {
+        padding: 15px;
+    }
+
+    td {
+        padding: 10px;
+    }
+}
