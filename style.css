@@ -1,15 +1,45 @@
-*
-/*Estilo reset*/
-
-    {
+/* Restablecer los estilos globales */
+* {
     margin: 0;
     padding: 0;
-    list-style: none;
-    box-sizing: border-box;
-    max-width: 1400px;
     box-sizing: border-box;
 }
 
+
+
+/* Limitar el tamaño de la imagen de campeones1 y ajustarla al tamaño de la página */
+.campeones1 img {
+    width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    max-width: 100%; /* Limita el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+}
+
+/* Asegurarse de que .campeones1 no se estire innecesariamente */
+.campeones1 {
+    width: 100%;
+    max-width: 600px; /* Limita el tamaño máximo de la imagen */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Limitar el tamaño de la imagen de campeones2 y ajustarla al tamaño de la página */
+.campeones2 img {
+    width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    max-width: 100%; /* Limita el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+}
+
+/* Asegurarse de que .campeones2 no se estire innecesariamente */
+.campeones2 {
+    width: 100%;
+    max-width: 600px; /* Limita el tamaño máximo de la imagen */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilo para los encabezados y barras de navegación */
 #header {
     text-decoration: none;
     background-color: #1f2937;
@@ -23,13 +53,10 @@
     align-items: center;
 }
 
-
 #header #navBar ul li a {
-
     font-style: none;
     text-decoration: none;
     color: white;
-
 }
 
 #main {
@@ -49,7 +76,6 @@ li {
 .football {
     color: white;
 }
-
 
 #main .h2-foto {
     text-align: center;
@@ -101,7 +127,7 @@ li {
 #main .contenido2 {
     display: flex;
     flex-direction: row;
-    flex-wrap:nowrap; /* Permite que las tarjetas se ajusten a una nueva línea si no caben */
+    flex-wrap: nowrap; /* Permite que las tarjetas se ajusten a una nueva línea si no caben */
     justify-content: center; /* Alinea las tarjetas con espacio entre ellas */
     gap: 50px; /* Establece el espacio entre las tarjetas */
 }
@@ -110,22 +136,19 @@ li {
     flex: 1 1 18rem; /* Cada tarjeta tiene un ancho mínimo de 18rem */
     max-width: 18rem; /* Limita el tamaño máximo de cada tarjeta */
 }
+
 .tituloIndex {
     text-align: center;
     text-decoration: underline;
 }
+
 .parrafoIndex {
     text-align: center;
 }
 
-
-
-
 /*css pagina Acerca de*/
-
 .tituloAcerca {
     text-align: center;
-
 }
 
 .card-row {
@@ -146,21 +169,21 @@ li {
     /* Ensure the cards keep their width and don’t shrink or grow */
 }
 
-
-
-
-
 .card-title {
     text-decoration: underline;
 }
 
 /*css hof*/
-
 .tituloHof {
     text-align: center;
 }
 
-.campeones2016 {
+.campeones1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.campeones2 {
     text-align: center;
     text-decoration: underline;
 }
@@ -169,16 +192,11 @@ li {
     text-decoration: underline;
 }
 
-
 .def {
-
     text-decoration: underline;
-
 }
 
-
 /* css info torneo*/
-
 .tituloInfo {
     text-align: center;
 }
@@ -187,19 +205,20 @@ li {
     text-align: center;
 }
 
+/* Estilo para la imagen con la clase fixture */
 .fixture {
-
-    width: 700px;
-    height: 400px;
-    align-self: center;
+    display: block;               /* Hace que la imagen sea un bloque */
+    max-width: 100%;              /* Limita el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto;                 /* Mantiene la proporción de la imagen */
+    margin: 20px auto;            /* Centra la imagen horizontalmente */
 }
+
+
 
 /*css contacto*/
 .contacto {
     text-align: center;
 }
-
-
 
 /* Scope all styles inside the #acerca-page wrapper */
 #acerca-page {
