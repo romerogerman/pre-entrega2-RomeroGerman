@@ -5,76 +5,121 @@
     box-sizing: border-box;
 }
 
-
+/*roster/hof*/
 
 /* Limitar el tamaño de la imagen de campeones1 y ajustarla al tamaño de la página */
 .campeones1 img {
-    width: 100%; /* Asegura que la imagen no se salga del contenedor */
-    max-width: 100%; /* Limita el tamaño máximo de la imagen al 100% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+    width: 100%;
+    /* Asegura que la imagen no se salga del contenedor */
+    max-width: 100%;
+    /* Limita el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+    /* Asegura que la imagen se ajuste al contenedor sin deformarse */
 }
 
 /* Asegurarse de que .campeones1 no se estire innecesariamente */
 .campeones1 {
     width: 100%;
-    max-width: 600px; /* Limita el tamaño máximo de la imagen */
+    max-width: 600px;
+    /* Limita el tamaño máximo de la imagen */
     margin: 0 auto;
     text-align: center;
 }
 
 /* Limitar el tamaño de la imagen de campeones2 y ajustarla al tamaño de la página */
 .campeones2 img {
-    width: 100%; /* Asegura que la imagen no se salga del contenedor */
-    max-width: 100%; /* Limita el tamaño máximo de la imagen al 100% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+    width: 100%;
+    /* Asegura que la imagen no se salga del contenedor */
+    max-width: 100%;
+    /* Limita el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+    /* Asegura que la imagen se ajuste al contenedor sin deformarse */
 }
 
 /* Asegurarse de que .campeones2 no se estire innecesariamente */
 .campeones2 {
     width: 100%;
-    max-width: 600px; /* Limita el tamaño máximo de la imagen */
+    max-width: 600px;
+    /* Limita el tamaño máximo de la imagen */
     margin: 0 auto;
     text-align: center;
 }
 
-/* Estilo para los encabezados y barras de navegación */
-#header {
-    text-decoration: none;
-    background-color: #1f2937;
-    max-height: 80px;
-}
-
+/* Estilos Generales del NavBar */
 #navBar {
-    text-decoration: none;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
 }
 
-#header #navBar ul li a {
-    font-style: none;
+#navBar .logo-h {
+    max-width: 80px;
+    height: auto;
+}
+
+#navBar .football {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-left: 10px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Estilos para el menú */
+#menu {
+    list-style-type: none;
+    display: flex;
+    gap: 15px; /* Reducir el espacio entre los elementos */
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu li a {
+    color: #fff;
     text-decoration: none;
-    color: white;
+    font-size: 1rem; /* Tamaño de la fuente normal */
+    padding: 5px;
 }
 
-#main {
-    background-color: beige;
+/* Estilo para el menú hamburguesa */
+#hamburger-menu {
+    display: none; /* Escondemos el icono por defecto */
 }
 
-li {
-    display: inline-block;
-    text-align: right;
+
+/* Ajustes para los elementos del menú hamburguesa */
+#menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
 }
 
-.logo-h {
-    width: 80px;
-    height: 80px;
+#menu li {
+    display: block; /* Los elementos del menú se apilan verticalmente */
+    padding: 10px 15px;
+    font-size: 0.9rem; /* Hacemos más pequeño el tamaño del texto */
+    text-align: center;
 }
 
-.football {
-    color: white;
+#menu li a {
+    font-size: 0.9rem; /* Reducimos el tamaño de la fuente para que luzca más prolijo */
 }
 
 #main .h2-foto {
@@ -124,17 +169,30 @@ li {
 }
 
 /*css index*/
-#main .contenido2 {
+/* Contenedor de las Cards */
+.contenido2 {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; /* Permite que las tarjetas se ajusten a una nueva línea si no caben */
-    justify-content: center; /* Alinea las tarjetas con espacio entre ellas */
-    gap: 50px; /* Establece el espacio entre las tarjetas */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
 }
 
+/* Estilo general de las cards */
 .card {
-    flex: 1 1 18rem; /* Cada tarjeta tiene un ancho mínimo de 18rem */
-    max-width: 18rem; /* Limita el tamaño máximo de cada tarjeta */
+    width: 100%; /* Por defecto, las cards ocupan el 100% */
+    max-width: 18rem; /* Se asegura de que las cards no superen este tamaño */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efecto hover */
 }
 
 .tituloIndex {
@@ -207,10 +265,14 @@ li {
 
 /* Estilo para la imagen con la clase fixture */
 .fixture {
-    display: block;               /* Hace que la imagen sea un bloque */
-    max-width: 100%;              /* Limita el tamaño máximo de la imagen al 100% del contenedor */
-    height: auto;                 /* Mantiene la proporción de la imagen */
-    margin: 20px auto;            /* Centra la imagen horizontalmente */
+    display: block;
+    /* Hace que la imagen sea un bloque */
+    max-width: 100%;
+    /* Limita el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    margin: 20px auto;
+    /* Centra la imagen horizontalmente */
 }
 
 
@@ -284,29 +346,51 @@ li {
     padding: 15px 0;
 }
 
-/* Responsive Media Queries */
-@media (max-width: 576px) {
+/* Ajustes específicos para 575px y menos */
+@media (max-width: 575px) {
+
+    /* Header */
+    #acerca-page #header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
     #acerca-page #header h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* NavBar */
+    #acerca-page #navBar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     #acerca-page #navBar ul {
+        padding: 0;
+        list-style-type: none;
         flex-direction: column;
-        align-items: center;
+        gap: 10px;
+        margin: 0;
     }
 
-    #acerca-page .card {
-        width: 100%;
+    #acerca-page #navBar ul li {
+        text-align: center;
     }
-}
 
-@media (max-width: 768px) {
+    /* Cards */
     #acerca-page .card-row {
         flex-direction: column;
+        gap: 15px;
+        padding: 10px;
     }
 
     #acerca-page .card {
-        width: 80%;
+        width: 90%;
+        /* Hacer que las tarjetas ocupen el 90% del ancho en pantallas pequeñas */
         margin: 0 auto;
     }
 }
@@ -349,7 +433,9 @@ li {
 /* Estilo específico para la página de Información Torneo */
 
 /* Mantener la estructura general para pantallas grandes */
-#main .tituloInfo, #main .tituloInfo2, #main .tabla {
+#main .tituloInfo,
+#main .tituloInfo2,
+#main .tabla {
     text-align: center;
 }
 
@@ -366,11 +452,14 @@ table {
     margin-top: 20px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid black;
 }
 
-th, td {
+th,
+td {
     padding: 8px;
     text-align: center;
 }
@@ -386,7 +475,8 @@ tr:nth-child(even) {
 /* Ajustes para pantallas pequeñas (celulares) */
 @media (max-width: 576px) {
     #main .tituloInfo {
-        font-size: 1.5rem; /* Ajustar tamaño del texto */
+        font-size: 1.5rem;
+        /* Ajustar tamaño del texto */
     }
 
     #main .tituloInfo2 {
@@ -394,15 +484,18 @@ tr:nth-child(even) {
     }
 
     table {
-        font-size: 0.8rem; /* Reducir tamaño de texto de la tabla */
+        font-size: 0.8rem;
+        /* Reducir tamaño de texto de la tabla */
     }
 
-    th, td {
+    th,
+    td {
         padding: 5px;
     }
 
     #main .fixture {
-        width: 100%; /* Ajustar la imagen a todo el ancho */
+        width: 100%;
+        /* Ajustar la imagen a todo el ancho */
     }
 
     .tabla {
@@ -411,7 +504,9 @@ tr:nth-child(even) {
     }
 
     /* Hacer que los elementos de la tabla ocupen más espacio en móviles */
-    table, th, td {
+    table,
+    th,
+    td {
         width: 100%;
         display: block;
         text-align: left;
@@ -437,15 +532,18 @@ tr:nth-child(even) {
     }
 
     table {
-        font-size: 1rem; /* Ajustar tamaño de texto de la tabla */
+        font-size: 1rem;
+        /* Ajustar tamaño de texto de la tabla */
     }
 
-    th, td {
+    th,
+    td {
         padding: 6px;
     }
 
     #main .fixture {
-        width: 90%; /* Ajustar la imagen para que ocupe el 90% del ancho */
+        width: 90%;
+        /* Ajustar la imagen para que ocupe el 90% del ancho */
     }
 
     .tabla {
@@ -453,7 +551,9 @@ tr:nth-child(even) {
     }
 
     /* Mejorar la visualización de las tablas en tablets */
-    table, th, td {
+    table,
+    th,
+    td {
         width: 100%;
         display: block;
         text-align: left;
@@ -471,7 +571,8 @@ tr:nth-child(even) {
 /* Ajustes para pantallas grandes (monitores de PC) */
 @media (min-width: 1200px) {
     #main .tituloInfo {
-        font-size: 2rem; /* Ajustar tamaño de texto para pantallas grandes */
+        font-size: 2rem;
+        /* Ajustar tamaño de texto para pantallas grandes */
     }
 
     #main .tituloInfo2 {
@@ -479,15 +580,18 @@ tr:nth-child(even) {
     }
 
     table {
-        font-size: 1.1rem; /* Ajustar tamaño de texto de la tabla */
+        font-size: 1.1rem;
+        /* Ajustar tamaño de texto de la tabla */
     }
 
-    th, td {
+    th,
+    td {
         padding: 10px;
     }
 
     #main .fixture {
-        width: 80%; /* Ajustar la imagen para que ocupe el 80% del ancho */
+        width: 80%;
+        /* Ajustar la imagen para que ocupe el 80% del ancho */
     }
 
     .tabla {
@@ -495,7 +599,9 @@ tr:nth-child(even) {
     }
 
     /* Hacer que las tablas se vean bien en monitores */
-    table, th, td {
+    table,
+    th,
+    td {
         width: 100%;
     }
 
@@ -506,4 +612,82 @@ tr:nth-child(even) {
     td {
         padding: 10px;
     }
+}
+
+
+/* Menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Mostrar el icono hamburguesa */
+    #navBar .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        width: 30px;
+        height: 20px;
+    }
+
+    #navBar .hamburger div {
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+   /* Restablecer los estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el menú */
+#menu {
+    list-style-type: none;
+    display: flex;
+    gap: 15px; /* Reducir el espacio entre los elementos */
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem; /* Tamaño de la fuente normal */
+    padding: 5px;
+}
+
+/* Estilo para el menú hamburguesa */
+#hamburger-menu {
+    display: none; /* Escondemos el icono por defecto */
+}
+
+/* Mostrar el menú en pantallas pequeñas automáticamente */
+@media (max-width: 768px) {
+    #menu {
+        display: flex; /* Mostrar el menú como flex */
+        position: relative;
+        background-color: #333;
+        flex-direction: column;
+        padding-top: 10px;
+        margin-top: 10px;
+        align-items: center;
+        gap: 10px; /* Espacio reducido entre los elementos del menú */
+    }
+
+    #menu li {
+        display: block; /* Apilar los elementos del menú */
+        padding: 8px 0; /* Menos padding para que quepan más enlaces */
+        font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    }
+
+    #menu li a {
+        padding: 8px 15px; /* Ajustar el padding de los enlaces */
+    }
+}
 }
