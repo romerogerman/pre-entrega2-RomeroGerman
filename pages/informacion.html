@@ -4,27 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header id="header">
-        <nav id="navBar">
-
-            <img class="logo-h" src="../images/logo-famdq.png" alt="logo-famdq">
-
-
-            <ul>
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="acercade.html">ACERCA DE</a></li>
-                <li><a href="#">INFORMACION TORNEO</a></li>
-                <li><a href="rosters-hof.html">ROSTERS/HOF</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
-            </ul>
-        </nav>
-
-    </header>
+    <body>
+        <div id="acerca-page">
+            <header id="header">
+                <nav id="navBar">
+                    <div class="navBar__seg--1">
+                    <img class="logo-h" src="../images/logo-famdq.png" alt="logo-famdq">
+                    <p class="football">FOOTBALL AMERICANO MAR DEL PLATA</p>
+                </div>
+                    <input type="checkbox" id="toggle-menu">
+                    <label for="toggle-menu" class="hamburger">&#9776</label>
+                    
+                    <!-- Menú de navegación -->
+                    <ul id="menu">
+                        <li><a href="../index.html">INICIO</a></li>
+                        <li><a href="acercade.html">ACERCA DE</a></li>
+                        <li><a href="#">INFORMACION TORNEO</a></li>
+                        <li><a href="rosters-hof.html">ROSTERS/HOF</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </header>
     <main id="main">
         <h1 class="tituloInfo">INFORMACION TORNEO</h1>
         <p>En esta seccion encontraremos toda la informacion pertinte al torneo que se esta jugando en este momento.</p>
@@ -38,33 +43,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Tabla de Posiciones</title>
-            <style>
-                table {
-                    width: 100%;
-                    border-collapse: collapse;
-                    margin-top: 20px;
-                }
-
-                table,
-                th,
-                td {
-                    border: 1px solid black;
-                }
-
-                th,
-                td {
-                    padding: 8px;
-                    text-align: center;
-                }
-
-                th {
-                    background-color: #f2f2f2;
-                }
-
-                tr:nth-child(even) {
-                    background-color: #f9f9f9;
-                }
-            </style>
+            
         </head>
 
         <body>

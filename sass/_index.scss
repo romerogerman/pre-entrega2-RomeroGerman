@@ -1,0 +1,60 @@
+/*style de pagina inicio*/ 
+#main .h2-foto {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.inti {
+    width: 500px;
+    height: 400px;
+}
+
+.tituloContenido-1 {
+    text-align: center;
+}
+
+.contenido2 {
+    text-align: center;
+    align-content: center;
+}
+
+
+
+/*css index*/
+/* Contenedor de las Cards */
+.contenido2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo general de las cards */
+.card {
+    width: 100%;
+    /* Por defecto, las cards ocupan el 100% */
+    max-width: 18rem;
+    /* Se asegura de que las cards no superen este tamaño */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    /* Efecto hover */
+}
+
+.tituloIndex {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.parrafoIndex {
+    text-align: center;
+}

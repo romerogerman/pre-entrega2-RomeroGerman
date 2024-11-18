@@ -1,0 +1,370 @@
+/* Ajustes específicos para 575px y menos */
+@media (max-width: 575px) {
+
+    /* Header */
+    #acerca-page #header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #acerca-page #header h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* NavBar */
+    #acerca-page #navBar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #acerca-page #navBar ul {
+        padding: 0;
+        list-style-type: none;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+    }
+
+    #acerca-page #navBar ul li {
+        text-align: center;
+    }
+
+    /* Estilo para el menú hamburguesa */
+#hamburger-menu {
+    display: none;
+    /* Escondemos el icono por defecto */
+}
+
+
+/* Ajustes para los elementos del menú hamburguesa */
+#menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+#menu li {
+    display: block;
+    /* Los elementos del menú se apilan verticalmente */
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    /* Hacemos más pequeño el tamaño del texto */
+    text-align: center;
+}
+
+#menu li a {
+    font-size: 0.9rem;
+    /* Reducimos el tamaño de la fuente para que luzca más prolijo */
+}
+
+
+/* Estilos para el menú*/
+#menu {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    /* Reducir el espacio entre los elementos */
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    /* Tamaño de la fuente normal */
+    padding: 5px;
+} 
+
+    /* Cards */
+    #acerca-page .card-row {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    #acerca-page .card {
+        width: 90%;
+        /* Hacer que las tarjetas ocupen el 90% del ancho en pantallas pequeñas */
+        margin: 0 auto;
+    }
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Ajustes para pantallas pequeñas (celulares) */
+@media (max-width: 576px) {
+    #main .tituloInfo {
+        font-size: 1.5rem;
+        /* Ajustar tamaño del texto */
+    }
+
+    #main .tituloInfo2 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+        /* Reducir tamaño de texto de la tabla */
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+
+    #main .fixture {
+        width: 100%;
+        /* Ajustar la imagen a todo el ancho */
+    }
+
+    .tabla {
+        font-size: 1.2rem;
+        margin: 20px 0;
+    }
+
+    /* Hacer que los elementos de la tabla ocupen más espacio en móviles */
+    table,
+    th,
+    td {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+
+    th {
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px 5px;
+    }
+}
+
+/* Ajustes para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    #main .tituloInfo {
+        font-size: 1.7rem;
+    }
+
+    #main .tituloInfo2 {
+        font-size: 1.3rem;
+    }
+
+    table {
+        font-size: 1rem;
+        /* Ajustar tamaño de texto de la tabla */
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+
+    #main .fixture {
+        width: 90%;
+        /* Ajustar la imagen para que ocupe el 90% del ancho */
+    }
+
+    .tabla {
+        font-size: 1.5rem;
+    }
+
+    /* Mejorar la visualización de las tablas en tablets */
+    table,
+    th,
+    td {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+
+    th {
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px 5px;
+    }
+}
+
+/* Ajustes para pantallas grandes (monitores de PC) */
+@media (min-width: 1200px) {
+    #main .tituloInfo {
+        font-size: 2rem;
+        /* Ajustar tamaño de texto para pantallas grandes */
+    }
+
+    #main .tituloInfo2 {
+        font-size: 1.8rem;
+    }
+
+    table {
+        font-size: 1.1rem;
+        /* Ajustar tamaño de texto de la tabla */
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    #main .fixture {
+        width: 80%;
+        /* Ajustar la imagen para que ocupe el 80% del ancho */
+    }
+
+    .tabla {
+        font-size: 1.5rem;
+    }
+
+    /* Hacer que las tablas se vean bien en monitores */
+    table,
+    th,
+    td {
+        width: 100%;
+    }
+
+    th {
+        padding: 15px;
+    }
+
+    td {
+        padding: 10px;
+    }
+}
+
+
+/* Menú en pantallas pequeñas */
+@media (max-width: 768px) {
+
+    /* Mostrar el icono hamburguesa */
+    #navBar .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        width: 30px;
+        height: 20px;
+    }
+
+    #navBar .hamburger div {
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    /* Restablecer los estilos globales */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Estilos para el menú */
+    #menu {
+        list-style-type: none;
+        display: flex;
+        gap: 15px;
+        /* Reducir el espacio entre los elementos */
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu li {
+        display: inline;
+    }
+
+    #menu li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        /* Tamaño de la fuente normal */
+        padding: 5px;
+    }
+
+    /* Estilo para el menú hamburguesa */
+    #hamburger-menu {
+        display: none;
+        /* Escondemos el icono por defecto */
+    }
+
+    /* Mostrar el menú en pantallas pequeñas automáticamente */
+    @media (max-width: 768px) {
+        #menu {
+            display: flex;
+            /* Mostrar el menú como flex */
+            position: relative;
+            background-color: white;
+            flex-direction: column;
+            padding-top: 10px;
+            margin-top: 10px;
+            align-items: center;
+            gap: 10px;
+            /* Espacio reducido entre los elementos del menú */
+        }
+
+        #menu li {
+            display: block;
+            /* Apilar los elementos del menú */
+            padding: 8px 0;
+            /* Menos padding para que quepan más enlaces */
+            font-size: 0.9rem;
+            /* Reducir el tamaño de la fuente */
+        }
+
+        #menu li a {
+            padding: 8px 15px;
+            /* Ajustar el padding de los enlaces */
+        }
+    }
+}
+
+/*NAVBAR QUERY FOR SMALL DEVICES*/
+
+@media (max-width: 820px) {
+    #menu {
+        display: none;
+        /*hides menu*/
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgb(86, 102, 196);
+        width: 100%;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+
+    #toggle-menu:checked+label+#menu {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

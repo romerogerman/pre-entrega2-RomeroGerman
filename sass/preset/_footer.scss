@@ -1,0 +1,27 @@
+#footer {
+    background-color: #1f2937;
+    width: 100%;
+    height: 80%;
+    font-style: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-f {
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+#footer a .instagram {
+    text-align: right;
+    text-decoration: none;
+}
+
+.footerUl,
+.copyright {
+    font-size: 20px;
+}
+

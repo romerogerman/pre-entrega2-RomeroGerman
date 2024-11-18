@@ -1,0 +1,249 @@
+/*css pagina Acerca de*/
+.tituloAcerca {
+    text-align: center;
+}
+
+.card-row {
+    display: flex;
+    /* Make the row a flex container */
+    flex-direction: row;
+    /* Ensure horizontal alignment */
+    justify-content: center;
+    /* Center cards within the row */
+    gap: 20px;
+    /* Space between the cards */
+    flex-wrap: nowrap;
+    /* Prevent wrapping to a new line */
+}
+
+.card {
+    flex: 0 0 auto;
+    /* Ensure the cards keep their width and don’t shrink or grow */
+}
+
+.card-title {
+    text-decoration: underline;
+}
+
+/* Scope all styles inside the #acerca-page wrapper */
+#acerca-page {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Cards Section */
+#acerca-page .card-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#acerca-page .card {
+    width: 18rem;
+    margin-bottom: 20px;
+}
+
+#acerca-page .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/*style info de torneo*/
+/* css info torneo*/
+.tituloInfo {
+    text-align: center;
+}
+
+.tituloInfo2 {
+    text-align: center;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+/* Estilo para la imagen con la clase fixture */
+.fixture {
+    display: block;
+    /* Hace que la imagen sea un bloque */
+    max-width: 100%;
+    /* Limita el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    margin: 20px auto;
+    /* Centra la imagen horizontalmente */
+}
+
+/* Estilo específico para la página de Información Torneo */
+
+/* Mantener la estructura general para pantallas grandes */
+#main .tituloInfo,
+#main .tituloInfo2,
+#main .tabla {
+    text-align: center;
+}
+
+#main .fixture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+/*style roster/hof*/
+/*roster/hof*/
+
+/* Limitar el tamaño de la imagen de campeones1 y ajustarla al tamaño de la página */
+.campeones1 img {
+    width: 100%;
+    /* Asegura que la imagen no se salga del contenedor */
+    max-width: 100%;
+    /* Limita el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+    /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+}
+
+/* Asegurarse de que .campeones1 no se estire innecesariamente */
+.campeones1 {
+    width: 100%;
+    max-width: 600px;
+    /* Limita el tamaño máximo de la imagen */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Limitar el tamaño de la imagen de campeones2 y ajustarla al tamaño de la página */
+.campeones2 img {
+    width: 100%;
+    /* Asegura que la imagen no se salga del contenedor */
+    max-width: 100%;
+    /* Limita el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+    /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+}
+
+/* Asegurarse de que .campeones2 no se estire innecesariamente */
+.campeones2 {
+    width: 100%;
+    max-width: 600px;
+    /* Limita el tamaño máximo de la imagen */
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
+
+/*css hof*/
+.tituloHof {
+    text-align: center;
+}
+
+.campeones1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.campeones2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.off {
+    text-decoration: underline;
+}
+
+.def {
+    text-decoration: underline;
+}
+
+
+/*css contacto*/
+.contacto {
+    text-align: center;
+}
+
+/* Wrapper to apply custom styles only for the contact page */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Form Section Styling */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
