@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="../js/script.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <nav id="navBar">
         <div class="navBar__seg--1">
-        <img class="logo-h" src="../images/logo-famdq.png" alt="logo-famdq">
-        <p class="football">FOOTBALL AMERICANO MAR DEL PLATA</p>
-    </div>
+            <img class="logo-h" src="../images/logo-famdq.png" alt="logo-famdq">
+            <p class="football">FOOTBALL AMERICANO MAR DEL PLATA</p>
+        </div>
         <input type="checkbox" id="toggle-menu">
         <label for="toggle-menu" class="hamburger">&#9776</label>
-        
+
         <!-- Menú de navegación -->
         <ul id="menu">
             <li><a href="../index.html">INICIO</a></li>
@@ -26,13 +28,13 @@
             <li><a href="contacto.html">CONTACTO</a></li>
         </ul>
     </nav>
-</header>
+    </header>
     <main id="main">
         <h1 class="tituloHof">Rosters/Hof</h1>
-        
+
         <h2 class="campeones2016">CAMPEONES 2016</h2>
         <img class="campeones1" src="../images/hof/campeones1.JPG" alt="campeones1">
-        
+
         <section class="equipo1">
             <p class="off1">OFENSIVA</p>
             <p>
@@ -45,42 +47,38 @@
                 7) G MARTIN PRESTA #58 <br>
                 8) G SANTIAGO RODRIGUEZ #92 <br>
             </p>
-            
+
             <p class="def">DEFENSA</p>
             <p>
-               1) DE IÑAKI IRURZUN #65 <br>
-               2) DT GERMAN ROMERO #62 / MARTIN PRESTA #58 <br>
-               3)DE GIAN REINA #55 / ADRIAN BENEDETTI #90 <br>
-               4) LB RUBEN GABOTTO #16 / OMAR SUAREZ #13 <br>
-               5)LB INTI NAHUEL SELLARES #42 <br>
-               6) CB FRANCO LUNA #27 <br>
-               7) CB MARCOS NAVARRA #25 <br>
-               8) S SANTIAGO RODRIGUEZ #92 <br>
+                1) DE IÑAKI IRURZUN #65 <br>
+                2) DT GERMAN ROMERO #62 / MARTIN PRESTA #58 <br>
+                3)DE GIAN REINA #55 / ADRIAN BENEDETTI #90 <br>
+                4) LB RUBEN GABOTTO #16 / OMAR SUAREZ #13 <br>
+                5)LB INTI NAHUEL SELLARES #42 <br>
+                6) CB FRANCO LUNA #27 <br>
+                7) CB MARCOS NAVARRA #25 <br>
+                8) S SANTIAGO RODRIGUEZ #92 <br>
             </p>
         </section>
-        
+
         <h2>CAMPEONES 2017</h2>
         <img class="campeones2" src="../images/hof/campeones2.jpg" alt="campeones2">
-        
+
         <section class="equipo2Of">
             <p class="off">OFENSIVA</p>
             <p></p>
-                1)QB MAXIMILIANO LAGNADO #7</br>
-                2)RB INTI NAHUEL SELLARES #42</br>
-                3)WR LUCAS "PIOJO" GABOTTO #16</br>
-                4)WR AGUSTIN TORRES</br>
-                5)WR LUCA RINGA #24</br>
-                6)C GERMAN ROMERO #62</br>
-                7)G FACUNDO RIVAS #77</br>
-                8)G MARTIN PRESTA #58 / IÑAKI IRURZUN #65</br>
-                9)TE JAVIER "PANADERO" IBAÑEZ #63</br>
+            1)QB MAXIMILIANO LAGNADO #7</br>
+            2)RB INTI NAHUEL SELLARES #42</br>
+            3)WR LUCAS "PIOJO" GABOTTO #16</br>
+            4)WR AGUSTIN TORRES</br>
+            5)WR LUCA RINGA #24</br>
+            6)C GERMAN ROMERO #62</br>
+            7)G FACUNDO RIVAS #77</br>
+            8)G MARTIN PRESTA #58 / IÑAKI IRURZUN #65</br>
+            9)TE JAVIER "PANADERO" IBAÑEZ #63</br>
             </p>
         </section>
-        
-        
-            
-        </section>
-        
+
         <div class="equipo2Def">
             <p class="def">DEFENSA</p>
             <p>
@@ -93,10 +91,42 @@
                 7)LB GIAN REINA #55 / RUBEN GABOTTO #85</br>
                 8)S AGUSTIN TORRES</br>
             </p>
-            
         </div>
+
+        <!-- Encuesta Hall of Fame -->
+
+
+
+        <div id="encuesta">
+            <h2>Vota por el mejor jugador de la liga</h2>
+            <div id="jugadores">
+                <button id="votar-inti">1. INTI SELLARES</button>
+                <button id="votar-maximiliano">2. MAXIMILIANO LAGNADO</button>
+                <button id="votar-german">3. GERMAN ROMERO</button>
+            </div>
+            <h3>Resultados de la encuesta</h3>
+            <div id="resultados">
+
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+
+
+        <script src="../js/main.js"></script>
+
+
+
+
+        </ul>
+        </div>
+        </div>
+
     </main>
-    
+
     <footer id="footer">
         <img class="logo-f" src="../images/logo-famdq.png" alt="">
         <section class="copyright">
@@ -105,8 +135,10 @@
         </section>
 
         <ul class="footerUl">
-            <li><a class="instagram" href="https://www.instagram.com/footballamericanomdq/" target="_blank">Instagram</a></li>
-            <li><a class="facebook" href="https://www.facebook.com/footballamericanomdp?locale=es_LA" target="_blank">Facebook</a></li>
+            <li><a class="instagram" href="https://www.instagram.com/footballamericanomdq/"
+                    target="_blank">Instagram</a></li>
+            <li><a class="facebook" href="https://www.facebook.com/footballamericanomdp?locale=es_LA"
+                    target="_blank">Facebook</a></li>
         </ul>
     </footer>
 </body>

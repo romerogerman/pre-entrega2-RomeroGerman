@@ -127,4 +127,51 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 5000);
     });
 });
+// java de la encuesta en rosters/hof//
+document.addEventListener("DOMContentLoaded", () => {
+    const resultadosDiv = document.getElementById("resultados");
+
+    // Cargar los resultados desde el archivo JSON
+    fetch('../js/data/resultados.json')  // Actualizamos la ruta al archivo JSON
+        .then(response => response.json())
+        .then(data => {
+            // Mostrar los resultados iniciales
+            mostrarResultados(data);
+
+            // Funciones para votar por cada jugador
+            document.getElementById("votar-inti").addEventListener("click", () => votarJugador(data, "INTI SELLARES"));
+            document.getElementById("votar-maximiliano").addEventListener("click", () => votarJugador(data, "MAXIMILIANO LAGNADO"));
+            document.getElementById("votar-german").addEventListener("click", () => votarJugador(data, "GERMAN ROMERO"));
+        })
+        .catch(error => console.error('Error al cargar los resultados:', error));
+
+    // Función para votar por un jugador
+    function votarJugador(data, jugadorVotado) {
+        const jugadorIndex = data.jugadores.findIndex(j => j.nombre === jugadorVotado);
+        if (jugadorIndex !== -1) {
+            data.jugadores[jugadorIndex].votos += 1;
+        }
+
+        // Mostrar los resultados inmediatamente después de votar
+        mostrarResultados(data);
+
+        // Para probar que la actualización funciona, podemos mostrar los datos de votos en consola
+        console.log(data.jugadores);
+    }
+
+    // Función para mostrar los resultados
+    function mostrarResultados(data) {
+        // Limpiar los resultados previos
+        resultadosDiv.innerHTML = '';
+
+        // Crear un elemento HTML para cada jugador y mostrar sus votos
+        data.jugadores.forEach(jugador => {
+            const p = document.createElement("p");
+            p.textContent = `${jugador.nombre}: ${jugador.votos} votos`;
+            resultadosDiv.appendChild(p);
+        });
+    }
+});
+
+
 
