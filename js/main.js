@@ -78,3 +78,53 @@ function filtrarMejores() {
 
 // Inicializar la tabla al cargar la página
 window.onload = actualizarTabla;
+
+
+// Formulario de contacto
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForm = document.getElementById("contactForm");
+    const confirmationMessage = document.getElementById("confirmationMessage");
+
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Evita el envío tradicional del formulario
+
+        // Capturar valores de los campos
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // Validación simple de campos
+        if (!name || !email || !message) {
+            alert("Por favor, completa todos los campos antes de enviar.");
+            return;
+        }
+
+        // Simular el envío guardando los datos en localStorage
+        const contactData = {
+            name: name,
+            email: email,
+            message: message,
+            date: new Date().toISOString()
+        };
+
+        console.log("Formulario enviado:", contactData);
+
+        let storedContacts = JSON.parse(localStorage.getItem("contactMessages")) || [];
+        storedContacts.push(contactData);
+        localStorage.setItem("contactMessages", JSON.stringify(storedContacts));
+
+        console.log("Datos guardados en localStorage:", storedContacts);
+
+        // Mostrar mensaje de confirmación
+        confirmationMessage.style.display = "block";
+
+        // Limpiar el formulario
+        contactForm.reset();
+
+        // Ocultar el mensaje de confirmación después de unos segundos
+        setTimeout(() => {
+            confirmationMessage.style.display = "none";
+        }, 5000);
+    });
+});
+
