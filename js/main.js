@@ -25,19 +25,19 @@ function calcularPuntosTorneo() {
         equipo.favor = puntosFavor;
         equipo.contra = puntosContra;
 
-        // Calcular puntos totales
+        
         equipo.puntos = (partidosGanados * 3); // 3 puntos por partido ganado
 
-        // Actualizar la diferencia de puntos
+        
         const diferencia = puntosFavor - puntosContra;
 
-        // Actualizar la tabla de posiciones
+        
         actualizarTabla();
         document.getElementById('resultadoPuntos').innerText = `El equipo ${equipoSeleccionado} tiene ${equipo.puntos} puntos acumulados y una diferencia de ${diferencia} puntos.`;
     }
 }
 
-// Función para actualizar la tabla de posiciones
+
 function actualizarTabla() {
     const tabla = document.getElementById('tablaPosiciones');
     tabla.innerHTML = equipos.map((e, index) => {
@@ -59,7 +59,7 @@ function actualizarTabla() {
     }).join('');
 }
 
-// Función para mostrar equipos
+
 function mostrarEquipos() {
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = equipos.map(e => `
@@ -67,7 +67,7 @@ function mostrarEquipos() {
     `).join('');
 }
 
-// Función para filtrar y mostrar los mejores equipos
+
 function filtrarMejores() {
     const mejores = equipos.filter(e => e.puntos >= 10);
     const resultado = document.getElementById('resultado');
@@ -76,30 +76,30 @@ function filtrarMejores() {
         : '<p>No hay equipos con más de 10 puntos.</p>';
 }
 
-// Inicializar la tabla al cargar la página
+
 window.onload = actualizarTabla;
 
 
-// Formulario de contacto
+
 document.addEventListener("DOMContentLoaded", () => {
     const contactForm = document.getElementById("contactForm");
     const confirmationMessage = document.getElementById("confirmationMessage");
 
     contactForm.addEventListener("submit", (event) => {
-        event.preventDefault(); // Evita el envío tradicional del formulario
+        event.preventDefault(); 
 
-        // Capturar valores de los campos
+        
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const message = document.getElementById("message").value.trim();
 
-        // Validación simple de campos
+        
         if (!name || !email || !message) {
             alert("Por favor, completa todos los campos antes de enviar.");
             return;
         }
 
-        // Simular el envío guardando los datos en localStorage
+        
         const contactData = {
             name: name,
             email: email,
@@ -115,56 +115,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
         console.log("Datos guardados en localStorage:", storedContacts);
 
-        // Mostrar mensaje de confirmación
+        
         confirmationMessage.style.display = "block";
 
-        // Limpiar el formulario
+        
         contactForm.reset();
 
-        // Ocultar el mensaje de confirmación después de unos segundos
+
         setTimeout(() => {
             confirmationMessage.style.display = "none";
         }, 5000);
     });
 });
-// java de la encuesta en rosters/hof//
+
 document.addEventListener("DOMContentLoaded", () => {
     const resultadosDiv = document.getElementById("resultados");
 
-    // Cargar los resultados desde el archivo JSON
-    fetch('../js/data/resultados.json')  // Actualizamos la ruta al archivo JSON
+
+    fetch('../data/resultados.json')
         .then(response => response.json())
         .then(data => {
-            // Mostrar los resultados iniciales
+
             mostrarResultados(data);
 
-            // Funciones para votar por cada jugador
+
             document.getElementById("votar-inti").addEventListener("click", () => votarJugador(data, "INTI SELLARES"));
             document.getElementById("votar-maximiliano").addEventListener("click", () => votarJugador(data, "MAXIMILIANO LAGNADO"));
             document.getElementById("votar-german").addEventListener("click", () => votarJugador(data, "GERMAN ROMERO"));
         })
         .catch(error => console.error('Error al cargar los resultados:', error));
 
-    // Función para votar por un jugador
+
     function votarJugador(data, jugadorVotado) {
         const jugadorIndex = data.jugadores.findIndex(j => j.nombre === jugadorVotado);
         if (jugadorIndex !== -1) {
             data.jugadores[jugadorIndex].votos += 1;
         }
 
-        // Mostrar los resultados inmediatamente después de votar
+
         mostrarResultados(data);
 
-        // Para probar que la actualización funciona, podemos mostrar los datos de votos en consola
-        console.log(data.jugadores);
+
+        Swal.fire({
+            title: '¡Gracias por tu voto!',
+            text: `Has votado por ${jugadorVotado}`,
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        });
     }
 
-    // Función para mostrar los resultados
+
     function mostrarResultados(data) {
-        // Limpiar los resultados previos
+
         resultadosDiv.innerHTML = '';
 
-        // Crear un elemento HTML para cada jugador y mostrar sus votos
+
         data.jugadores.forEach(jugador => {
             const p = document.createElement("p");
             p.textContent = `${jugador.nombre}: ${jugador.votos} votos`;
@@ -172,6 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
 
 
 
